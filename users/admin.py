@@ -7,12 +7,15 @@ class UserModelAdmin(admin.ModelAdmin):
     list_display = ('username','last_login','department')
 
     def save_model(self, request, obj, form, change):
-        user_database = UserProfile.objects.get(pk=obj.pk)
-        # Check firs the case in which the password is not encoded, then check in the case that the password is encode
-        if not (check_password(form.data['password'], user_database.password) or user_database.password == form.data['password']):
-            obj.password = make_password(obj.password)
-        else:
-            obj.password = user_database.password
+        try:
+            user_database = UserProfile.objects.get(pk=obj.pk)
+            # Check firs the case in which the password is not encoded, then check in the case that the password is encode
+            if not (check_password(form.data['password'], user_database.password) or user_database.password == form.data['password']):
+                obj.password = make_password(obj.password)
+            else:
+                obj.password = user_database.password
+        except:
+            obj.password = make_password(request.user.password)
         super().save_model(request, obj, form, change)
 
 
