@@ -1,0 +1,152 @@
+{% extends 'base.html' %} {% load static %} {% block content %} {% comment %}
+navbar {% endcomment %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Beconhouse Election Community</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/users/logout/">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+{% comment %} userProfile section {% endcomment %}
+<div class="row m-0">
+  <div class="col-3 border" style="min-height: 100vh">
+    <div class="text-center">
+      <h4>Profile</h4>
+      <img
+        class="rounded-circle my-2"
+        style="object-fit: cover"
+        width="220"
+        height="220"
+        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+        alt=""
+      />
+      {% comment %}
+      <h6>{{username}}</h6>
+      {% endcomment %}
+    </div>
+  </div>
+  <div class="col-9">
+    <h3 class="text-center py-2">Select Any Team</h3>
+    <div class="row my-2 mx-5 text-center">
+    <form>
+      <div class="col-6 my-1">
+        <div class="card mx-auto" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            alt="Card image cap"
+          />
+          <div class="card-body py-1">
+            <div class="form-check px-2 d-flex align-items-center">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios1"
+                value="option1"
+                checked
+              />
+              <label class="card-text" for="exampleRadios1">
+                Default radio
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 my-1">
+        <div class="card  mx-auto" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            alt="Card image cap"
+          />
+          <div class="card-body py-1">
+            <div class="form-check px-2 d-flex align-items-center">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios2"
+                value="option1"
+                checked
+              />
+              <label class="card-text" for="exampleRadios2">
+                Default radio
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 my-1">
+        <div class="card  mx-auto" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            alt="Card image cap"
+          />
+          <div class="card-body py-1">
+            <div class="form-check px-2 d-flex align-items-center">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios3"
+                value="option1"
+                checked
+              />
+              <label class="card-text" for="exampleRadios3">
+                Default radio
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 my-1">
+        <div class="card  mx-auto" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            alt="Card image cap"
+          />
+          <div class="card-body py-1">
+            <div class="form-check px-2 d-flex align-items-center">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios4"
+                value="option1"
+                checked
+              />
+              <label class="card-text" for="exampleRadios4">
+                Default radio
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    <button class='btn btn-primary mx-auto'> Submit </button>
+    </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
